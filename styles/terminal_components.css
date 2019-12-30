@@ -7,6 +7,10 @@
     color: yellowgreen;
     font-family: 'Courier New', Courier, monospace;
   }
+  .consolas{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+  }
   .terminal_input{
     border-color: transparent;
     background-color: transparent;
