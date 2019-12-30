@@ -22,17 +22,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
-let path: String;
+let container: HTMLDivElement;
+//the pat
+var Path = '~'
+console.log(Path);
 let number_of_cmds: number = 0;
 let username: String = "user" + random(1, 999);
-console.log("Hi, here is your username@hotsname = "+username+"@cheese")
+console.log("Hi, here is your username@hotsname = " + username + "@cheese")
 
-let table: HTMLTableElement;
+let Table: HTMLTableElement;
 
 function random(x, y) {
     return Math.floor(Math.random() * (y - x + 1) + x);
 }
 window.onload = function () {
+
+    container = document.getElementById('CheeseTerminal');
     CheeseTerminal = new Terminal();
 }
 
@@ -48,7 +53,7 @@ class Command {
         let output: HTMLParagraphElement = document.createElement('p');
         output.classList.add("consolas");
         output.innerText = reflected_msg;
-        document.body.appendChild(output);
+        container.appendChild(output);
         this.input_cmd.disabled = true;
 
     }
@@ -61,29 +66,30 @@ class Command {
             if (e.keyCode == 13) {
                 this.exec();
                 CheeseTerminal = new Terminal();
-                 }
+            }
 
         })
-        
+
     }
 
 }
 class Terminal {
     constructor() {
         number_of_cmds++;
-        table = document.createElement('table');
-        table.style.cssText = 'color: aliceblue; width:fit-contents;';
-        table.cellSpacing = "0";
-        table.setAttribute("id", "terminal_line" + number_of_cmds.toString());
-        document.body.appendChild(table);
-        var row = table.insertRow(0);
+        Table = document.createElement('table');
+        Table.style.cssText = 'color: aliceblue; width:fit-contents;';
+        Table.cellSpacing = "0";
+        Table.setAttribute("id", "terminal_line" + number_of_cmds.toString());
+        //container.appendChild(Table);
+        container.appendChild(Table);
+        var row = Table.insertRow(0);
         var user_host_cell = row.insertCell(row.cells.length);
         let user_host = '<td >user@cheese:</td>';
         user_host_cell.innerHTML = user_host;
         user_host_cell.classList.add("td_user_host_dollar")
 
         var path_cell = row.insertCell(row.cells.length);
-        let path_html = '<td>~</td>';
+        let path_html = '<td>' + Path + '</td>';
         path_cell.innerHTML = path_html;
         path_cell.classList.add("td_path")
 
@@ -98,7 +104,7 @@ class Terminal {
         var cmd = new Command().getElement();
         cmd_cell.appendChild(cmd);
         (document.getElementById('cmd' + (number_of_cmds).toString()) as HTMLInputElement).focus();
-           
+
 
     }
 }
