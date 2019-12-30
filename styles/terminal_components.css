@@ -10,6 +10,7 @@
   .consolas{
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: unset;
   }
   .terminal_input{
     border-color: transparent;
@@ -17,6 +18,7 @@
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
+    border-color: transparent;
     width: 87vw ;
   }

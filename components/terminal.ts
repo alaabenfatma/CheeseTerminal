@@ -22,10 +22,7 @@ class  Command{
         let output: HTMLParagraphElement = document.createElement('p');
         output.classList.add("consolas");
         output.innerText = reflected_msg;
-        var row = table.insertRow(1);
-        let output_container = row.insertCell(0);
-        output_container.innerHTML = '<td ></td>';
-        output_container.appendChild(output);
+        document.body.appendChild(output);
         this.input_cmd.disabled = true;
         
         }
@@ -34,17 +31,15 @@ class  Command{
         this.input_cmd.classList.add('terminal_input');
         this.input_cmd.id='cmd' + number_of_cmds.toString();
         this.input_cmd.type = "text";
-        this.input_cmd.autofocus = true;
         this.input_cmd.addEventListener('keypress', (e: KeyboardEvent) =>{
              if(e.keyCode == 13){
                  this.exec();
-                 
                  CT = new Terminal();
                  (document.getElementById('cmd' + (number_of_cmds).toString()) as HTMLInputElement).focus();
              }
         
          })
-         this.input_cmd.focus();
+        this.input_cmd.focus();
     }
     
 }
@@ -54,7 +49,7 @@ class Terminal {
         table = document.createElement('table');
         table.style.cssText = 'color: aliceblue; width:fit-contents;';
         table.cellSpacing = "0";
-        table.setAttribute("id", "Terminal");
+        table.setAttribute("id", "terminal_line"+number_of_cmds.toString());
         document.body.appendChild(table);
         var row = table.insertRow(0);
         var user_host_cell = row.insertCell(row.cells.length);
