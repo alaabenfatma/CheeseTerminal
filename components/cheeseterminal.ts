@@ -37,7 +37,7 @@ function random(x, y) {
 }
 window.onload = function () {
 
-    container = document.getElementById('CheeseTerminal');
+    container = <HTMLDivElement> document.getElementById("CheeseTerminal");
     CheeseTerminal = new Terminal();
 }
 
