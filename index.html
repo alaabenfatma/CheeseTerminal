@@ -1,20 +1,19 @@
 <html>
 
 <head>
-    <link  rel="stylesheet" type="text/css" href="./styles//terminal_components.css"/>
+    
+   
+    <script src="./src/events_manager.js"></script>
+    <script src="./components/terminal.js"></script>
+    <link  rel="stylesheet" type="text/css" href="./styles/terminal_components.css"/>
 </head>
 
-<body style="background-color: black;">
+<body style="background-color: black;" onclick="msg()">
 <div id="commands_holder" class="div-table">
     <div class="div-table-row">
+            <table id="Terminal" cellspacing="0"   style="color: aliceblue;" >
             
-            <table cellspacing="0"  style="color: aliceblue;" >
-                <tr style="width: fit-content;">
-                   <td class="td_user_host_dollar">user@cheese:</td>
-                   <td class="td_path">~</td>
-                   <td class="td_user_host_dollar">🧀 </td>
-                   <td><input type="text" id="cmd" class="terminal_input" autofocus></td>
-                </tr>
+            </table>    
         </div>
         </div>
 
