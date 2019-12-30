@@ -11,13 +11,13 @@ CheeseTerminal has been written in TypeScript. Hence, you have to compile the TS
 
 ```tsc cheeseterminal.ts```
 
-3. Add these two lines of code to you html file:
+3. Add these two lines of code to your HTML file:
 ```
 <script src="{path->cheeseterminal.js}"></script>
 <link  rel="stylesheet" type="text/css" href="{path->cheeseterminal.css}"/>
 ```
   
-4. Add a container to your page's body in which the JS script will generate the terminal. The script will actually look for a specific div that is called **CheeseTerminal**
+4. Add a container to the body of the HTML in which the JS script will generate the terminal. The script will actually look for a specific div that is called **CheeseTerminal**
 
 ```<div id="CheeseTerminal" ></div>```
 
