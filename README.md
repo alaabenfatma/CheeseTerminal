@@ -11,7 +11,7 @@ CheeseTerminal has been written in TypeScript. Hence, you have to compile the TS
 
 ```tsc cheeseterminal.ts```
 
-3. Append these two following lines of code to you html file:
+3. Add these two lines of code to you html file:
 ```
 <script src="{path->cheeseterminal.js}"></script>
 <link  rel="stylesheet" type="text/css" href="{path->cheeseterminal.css}"/>
