@@ -1,0 +1,24 @@
+
+.td_user_host_dollar{
+    color: gold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .td_path{
+    color: yellowgreen;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .consolas{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: unset;
+  }
+  .terminal_input{
+    border-color: transparent;
+    background-color: transparent;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    border: 0px solid transparent;
+    border-color: transparent;
+    width: 87vw ;
+  }
